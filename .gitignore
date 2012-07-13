@@ -11,3 +11,7 @@ nbproject/
 .AppleDouble
 .DS_Store
 .idea
+
+#chrome extension files
+*.pem
+*.crx
