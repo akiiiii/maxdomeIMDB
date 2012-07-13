@@ -1,0 +1,13 @@
+#netbeans project
+nbproject/
+
+#zend studio project
+.settings/
+.buildpath
+.project
+
+#mac-files
+._*
+.AppleDouble
+.DS_Store
+.idea

@@ -1,0 +1,18 @@
+{
+  "name": "Maxdome-IMDB Ratings",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "This extension will grab the title of the maxdome.de movie details page and get the rating from imdb.com. No more copy&pasting the titles into IMDB; icons by by Paul Robert Lloyd",
+  "permissions": [
+    "tabs", 
+    "http://*/*", 
+    "https://*/*",
+    "http://www.imdbapi.com/*",
+    "http://ajax.googleapis.com/ajax/*"
+  ],
+  "browser_action": {
+      "default_title": "Set this page's color.",
+      "default_icon": "imdb.png",
+      "default_popup": "popup.html"
+  }
+}
