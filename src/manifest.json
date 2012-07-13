@@ -11,7 +11,7 @@
     "http://ajax.googleapis.com/ajax/*"
   ],
   "browser_action": {
-      "default_title": "Set this page's color.",
+      "default_title": "Choose option",
       "default_icon": "imdb.png",
       "default_popup": "popup.html"
   }
