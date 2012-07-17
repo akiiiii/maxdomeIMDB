@@ -1,6 +1,5 @@
 /*
-* To change this template, choose Tools | Templates
-* and open the template in the editor.
+*@author: Sandy Lewanscheck
 */
 
 
@@ -28,7 +27,6 @@ if(myTitle != '') {
 
 
 function fetchGoogleIMDBData(callback, myTitle, option) {
-    //alert(myTitle);
     var escapedTitle = escape(myTitle);
     var xhr = new XMLHttpRequest();
     // default URL => The Glass House
@@ -66,14 +64,10 @@ function fetchGoogleIMDBData(callback, myTitle, option) {
 };
 
 function fetchIMDBData(callback, url) {
-    //alert(escape(myTitle));
-
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.onreadystatechange = function(data) {
         if (xhr.readyState == 4) {
-            // JSON.parse does not evaluate the attacker's scripts.
-            //var data = JSON.parse(xhr.responseText);
             if (xhr.status == 200) {
                 var data = xhr.responseText;
                 callback(data);
@@ -82,7 +76,6 @@ function fetchIMDBData(callback, url) {
             }
         }
     };
-
     xhr.send();
 };
 
@@ -98,7 +91,5 @@ function onResult(data) {
     } else {
         rating = ratingMatch;
     }
-
     alert("Rating: " + rating + "/10");
-
 };

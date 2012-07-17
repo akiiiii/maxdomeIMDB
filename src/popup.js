@@ -2,7 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
+/*
+*@author: Sandy Lewanscheck
+* based on Chrome Extension example
+*/
 function click(e) {
     var option1 = e.target.id;
     chrome.tabs.executeScript(null, {file: "jquery-1.7.2.min.js"}, function(){
