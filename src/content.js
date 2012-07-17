@@ -1,18 +1,8 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 /*
-if (typeof jQuery != 'undefined') {
- 
-    alert("jQuery library is loaded!");
- 
-}else{
- 
-    alert("jQuery library is not found!");
- 
-}
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
 */
+
 
 // title on top-right of page
 var big_title = $('span.fn').text();
@@ -33,7 +23,7 @@ if(checkforprefix != small_title_prefix) {
 
 if(myTitle != '') {
     // use option - coming from popup.html => div.id
-    fetchGoogleIMDBData(fetchIMDBData, myTitle, option); 
+    fetchGoogleIMDBData(fetchIMDBData, myTitle, option);
 }
 
 
@@ -61,7 +51,7 @@ function fetchGoogleIMDBData(callback, myTitle, option) {
                             window.open(url);
                         }
                     } else {
-                        callback(onResult, null); 
+                        callback(onResult, null);
                     }
                 } else {
                     callback(onResult, null);

@@ -15,3 +15,8 @@ nbproject/
 #chrome extension files
 *.pem
 *.crx
+
+#image files
+screenshot.jpg
+screenshot.psd
+screenshot_smaller.psd
