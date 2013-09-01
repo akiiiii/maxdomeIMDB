@@ -1,6 +1,6 @@
 {
   "name": "Maxdome-IMDB Ratings",
-  "version": "1.2",
+  "version": "1.3",
   "manifest_version": 2,
   "description": "Holt beim Surfen auf Maxdome.de mittels Knopfdruck das Rating von imdb.com; icon by Paul Robert Lloyd",
   "permissions": [

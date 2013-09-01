@@ -4,20 +4,18 @@
 
 
 // title on top-right of page
-var big_title = $('span.fn').text();
-
+var big_title = $('.col-description h1').text();
+// check for umlauts - maybe we can avoid those buggers
+var umlauts = big_title.match(/[äöüÄÖÜß]+/g);
 // assume that title is english - check for original title
-var small_title_prefix = 'Originaltitel';
-var org_title_raw = $('table.detail-info-table').find("tr:eq(1)").text();
-
-var checkforprefix = org_title_raw.substr(0,small_title_prefix.length);
-
+var small_title = $('.col-description h2').text();
 var myTitle = '';
 
-if(checkforprefix != small_title_prefix) {
+
+if(big_title != '' && umlauts == null) {
     myTitle = big_title;
 } else {
-    myTitle = org_title_raw.substr(small_title_prefix.length, org_title_raw.length);
+    myTitle = small_title;
 }
 
 if(myTitle != '') {
@@ -81,11 +79,9 @@ function fetchIMDBData(callback, url) {
 
 
 
-
 function onResult(data) {
-    var ratingMatch = data.match(/<span itemprop="ratingValue">(\d\.\d)<\/span>/);
+    var ratingMatch = data.match(/<span itemprop="ratingValue">(\d{1,2}[,.]\d{1,2})<\/span>/);
     var rating = 0;
-
     if(ratingMatch.length > 1) {
         rating = ratingMatch[1];
     } else {
